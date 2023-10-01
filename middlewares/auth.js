@@ -45,7 +45,7 @@ const verifyJWTMiddleware = (req, res, next) => {
 const verifyAdminMiddleware = (req, res, next) => {
     console.log(req.user.role)
     if (req.user.role !== "admin"){
-        res.status(401).json({"message":"only admin is allowed"})
+        res.status(401).json({"message":"action-not-allowed"})
    }
     next()
 
