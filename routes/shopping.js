@@ -9,6 +9,7 @@ router.get('/all/',shopController.getShopItemsController);
 router.post('/create/', middlewares.verifyAdminMiddleware, validators.newItemValidator,shopController.createItemController);
 router.get('/single/:id/', shopController.getSingleItemController);
 router.put('/edit/:id/', middlewares.verifyAdminMiddleware, validators.editItemValidator,shopController.editSingleItemController);
+router.delete('/delete/:id/', middlewares.verifyAdminMiddleware, shopController.deleteSingleItem);
 
 
 module.exports = router;
