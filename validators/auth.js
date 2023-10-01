@@ -1,4 +1,4 @@
-const { check, validationResult } = require('express-validator');
+const { check } = require('express-validator');
 
 const newUserValidator  = [
     check('email', 'must provide a valid email').isEmail().isLength({ min: 3}),

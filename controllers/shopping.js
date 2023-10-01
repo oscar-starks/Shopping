@@ -70,5 +70,5 @@ const deleteSingleItem = async (req, res) => {
 }
 
 module.exports = {
-    getShopItemsController, createItemController, getSingleItemController, getSingleItemController, deleteSingleItem
+    getShopItemsController, createItemController, editSingleItemController, getSingleItemController, deleteSingleItem
 }

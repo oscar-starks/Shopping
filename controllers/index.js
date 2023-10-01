@@ -24,4 +24,4 @@ app.use('/auth', require('../routes/auth.js'));
 
 app.use(authMiddleWare.verifyJWTMiddleware);
 
-app.use('/shoppping', require('../routes/shopping.js'));
+app.use('/shopping', require('../routes/shopping.js'));
