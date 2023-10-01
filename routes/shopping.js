@@ -5,14 +5,10 @@ const validators = require('../validators/shopping');
 const middlewares = require('../middlewares/auth');
 
 
-
-// router.post('/signup/',validators.newUserValidator, authController.registerUserController);
-// router.post('/login/',validators.loginValidator, authController.loginController);
-router.get('/alls/',shopController.getShopItemsController);
+router.get('/all/',shopController.getShopItemsController);
 router.post('/create/', middlewares.verifyAdminMiddleware, validators.newItemValidator,shopController.createItemController);
-
-// router.post();
-
+router.get('/single/:id/', shopController.getSingleItemController);
+router.put('/edit/:id/', middlewares.verifyAdminMiddleware, validators.editItemValidator,shopController.editSingleItemController);
 
 
 module.exports = router;

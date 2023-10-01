@@ -6,7 +6,9 @@ const newItemValidator  = [
     check('price', 'price must be provided').isInt(),
     check('isInStock', 'must be a boolean value').isBoolean(),
 ]
-
+const editItemValidator = [
+    check('isInStock', 'must be a boolean value').isBoolean(),
+]
 module.exports = {
-    newItemValidator
+    newItemValidator, editItemValidator
 }

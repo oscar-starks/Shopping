@@ -42,13 +42,12 @@ const editSingleItemController = async (req, res) => {
     const item = await schema.shopItemsCollection.findById(itemID)
 
     .then((item) =>{
-        secondTask = task[0]
-        secondTask.taskBody = req.body.taskBody
-        secondTask.save()
-        res.json({"message":"task updated"});
+        item.isInStock = req.body.isInStock
+        item.save();
+        res.json({"message":"item updated"});
     })
     .catch((err) =>{
-        res.status(404).json({"message":"task not found"});
+        res.status(404).json({"message":"item not found"});
     });
  
 }
