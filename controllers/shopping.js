@@ -60,7 +60,7 @@ const deleteSingleItem = async (req, res) => {
 
     .then((item) => {
         if (item) {
-          res.json({"message":'Item deleted successfully', "data":task});
+          res.json({"message":'Item deleted successfully'});
         } else {
           res.status(400).json({"message":'No matching item found'});
 
